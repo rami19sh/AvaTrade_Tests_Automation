@@ -6,7 +6,7 @@
 #### 1- clone this repositiry
 #### 2- open folder "AvaTrade_Tests_Automation"
 
-#### 3- click on TestCase1.cs
+#### 3- click on UnitTest1.cs
 #### 4- download Visual Studio
 #### 5- right click on Solution on right side
 #### 6- click on Manage NUnit packages
