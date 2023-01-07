@@ -38,11 +38,12 @@ namespace AvaTrade_Tests_Automation
         /*
          * TC001
           This test goes to the www.avatrade.com website
-          Click on the login button
-          Enter email and password in the appropriate fields and click SUBMIT
-          (Sometimes recognizes an automation action so displays a button that asks to be pressed and held)
-          Going to the login page
-          Checks that after the word WELCOME the first name of the account holder "rami"
+          Clicks on the login button.
+          Enters the email and password in the appropriate fields and clicks SUBMIT
+          (Sometimes, the website's system detects the automation process and tries to prevent it by displaying a button that needs to be pressed and held as some kind of Captcha to make sure “a human is using it”)
+          Navigates to the login page 
+          After logging in, the test validates that the username used to login is indeed the relevant one,
+          by checking the name after the word WELCOME, in this example it checks if it’s “rami”  
          */
 
         [Test]
@@ -56,8 +57,11 @@ namespace AvaTrade_Tests_Automation
             driver.FindElement(By.Id("password")).Click();
             driver.FindElement(By.Id("password")).SendKeys("Rami1992sh!@#");
             driver.FindElement(By.Id("password")).SendKeys(Keys.Enter);
-            //After logging in to the website, a window pops up from the website that fails the test,
-            //did sleep for a few seconds to close the window before it fails the test
+            /*
+            Sometimes after logging in, a pop-up window appears and it blocks the elements that the automation test
+             checks in order to work correctly. To solve this issue, a delay (sleep) of a few seconds is added
+             in order to close this pop-up window, and prevent any issue caused by it
+            */
             Thread.Sleep(9000);
             driver.FindElement(By.CssSelector("#menuItem2 > .logo-text-table:nth-child(2) .contetn")).Click();
             string name_account = driver.FindElement(By.XPath("//*[@id=\"welcomeText\"]")).Text;
@@ -67,10 +71,14 @@ namespace AvaTrade_Tests_Automation
 
         /*
          * TC002
-         * This test goes to the www.avatrade.com website and clicks on one of the trading list
-         * checks if the percentage written on the high side is really greater than the percentage on the low side
-         * the possibility to check on which trade number the test will be performed
-         * if the TRADE number entered is not within the range then the test fails
+         This test goes to the www.avatrade.com website and clicks on one of the trading lists
+         Compares the values of the sections high/low, and checks if the value of the section “high”
+         is indeed greater than the value “low”
+
+        There is also in a function that allows the user to choose in which trade he wants
+        to compare the high-low values(TestCase). The user can do so by counting from top to bottom
+        in ascending order to choose the trade he wants for example, If the user wants to compare the high/low sections
+        of Tesla’s trade for example, he clicks “5” 
          
          */
 
@@ -99,10 +107,10 @@ namespace AvaTrade_Tests_Automation
 
         /*
          * TC003
-         Click on hamburger list on the left edge of the screen
-         Click on the search field and type "what is forex"
-         Click on the first result
-         Check if the page title is the same as the search
+         The test clicks on the “Hamburger menu"
+         Navigates to the search field, types “what is forex”
+         Clicks on the first result, after the page loads,
+         compares that the title of this page is indeed the one searched for.
         */
 
         [Test]
