@@ -3,10 +3,11 @@
 <img src="https://user-images.githubusercontent.com/107935566/211152452-122bf0d5-27ba-4d11-b3c0-c0ef79e02035.png">
 
 ## Requirments : 
-#### 1- download Visual Studio
-#### 2- right click on Solution on right side
-#### 3- click on Manage NUnit packages
-#### 4- install packages
+#### 1- clone this repositiry
+#### 2- download Visual Studio
+#### 3- right click on Solution on right side
+#### 4- click on Manage NUnit packages
+#### 5- install packages
  ###### a- NUnit
  ###### b- NUnitTestAdapter
  ###### c- Selenium.WebDriver
@@ -37,8 +38,14 @@ After logging in, the test validates that the username used to login is indeed t
  
  
   ## Test Case 3 :
- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+ The test clicks on the “Hamburger menu”
+ Navigates to the search field, types “what is forex”
+ Clicks on the first result, after the page loads,
+ compares that the title of this page is indeed the one searched for.
+ <img src="https://user-images.githubusercontent.com/107935566/211155570-9122cee3-5867-41ee-9413-c98bd53a98af.jpg">
  
- [![TC002]](https://user-images.githubusercontent.com/107935566/211154951-8173595a-65db-439e-ac87-f2f6fd9846cd.mp4)
+
+
+ [![TC003]](https://user-images.githubusercontent.com/107935566/211154951-8173595a-65db-439e-ac87-f2f6fd9846cd.mp4)
  
 
