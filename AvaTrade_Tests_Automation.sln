@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaTrade_Tests_Automation", "AvaTrade_Tests_Automation\AvaTrade_Tests_Automation.csproj", "{1F445EB1-24FE-4836-B97B-FD9A13CF157B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F445EB1-24FE-4836-B97B-FD9A13CF157B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F445EB1-24FE-4836-B97B-FD9A13CF157B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F445EB1-24FE-4836-B97B-FD9A13CF157B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F445EB1-24FE-4836-B97B-FD9A13CF157B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A77A5B9-E2AD-4CCD-AC4B-2F05E1F24761}
+	EndGlobalSection
+EndGlobal
