@@ -49,7 +49,6 @@ namespace AvaTrade_Tests_Automation
         public void TC001_test_login_name()
         {
             driver.Manage().Window.Size = new System.Drawing.Size(1552, 832);
-            //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
             driver.FindElement(By.CssSelector(".log-in-desktop > .link-btn")).Click();
             driver.FindElement(By.Id("logEmailInput")).Click();
             String email = "rami19shehk@gmail.com";
@@ -79,13 +78,16 @@ namespace AvaTrade_Tests_Automation
         [TestCase(2)]
         public void TC002_test_high_low_in_tranding_list(int index_of_trade)
         {
-            //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
             int cnt = driver.FindElements(By.ClassName("instrument-title")).Count;
             if (index_of_trade > 0 && index_of_trade <= cnt)
             {
 
                 driver.FindElements(By.ClassName("instrument-title"))[index_of_trade - 1].Click();
-                Thread.Sleep(4000);
+                /*
+                   At the entrance of the page the data will be 0
+                   You have to wait about 2 seconds until the data is updated
+                */
+                Thread.Sleep(3000);
                 string high = driver.FindElement(By.CssSelector("#ws_bind_ph > div > div.instrument-hight-low > div.hight-low-wrap > span.high-value.ws-bind-high")).Text;
                 string low = driver.FindElement(By.CssSelector("#ws_bind_ph > div > div.instrument-hight-low > div.hight-low-wrap > span.low-value.ws-bind-low")).Text;
                 float f_high = float.Parse(high, CultureInfo.InvariantCulture.NumberFormat);
